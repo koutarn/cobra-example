@@ -5,24 +5,25 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 
 	"github.com/spf13/cobra"
 )
 
 // worldCmd represents the world command
 var worldCmd = &cobra.Command{
-	Use:   "world",
-	Short: "say hello your name",
-	Long:  "this command say hello your name",
+	Use:     "world",
+	Short:   "say hello your name",
+	Long:    "this command say hello your name",
+	Example: "hello world koutarn",
 	RunE: func(cmd *cobra.Command, args []string) error {
-	    if len(args) < 1 {
-	        return errors.New("requires name")
-        }
+		if len(args) < 1 {
+			return errors.New("requires name")
+		}
 
-        fmt.Printf("Hello %sさん",args[0])
-        return nil
+		fmt.Printf("Hello %sさん", args[0])
+		return nil
 	},
 }
 

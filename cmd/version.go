@@ -17,8 +17,8 @@ const (
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "A brief description of your command",
-	Long:  "All software has version.",
+	Short: "print version",
+	Long:  "print out version",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Printf("%s", version)
 		return nil
